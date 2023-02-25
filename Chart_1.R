@@ -1,5 +1,6 @@
-library(tidyverse)
+library(dplyr)
 library(ggplot2)
+library(tidyr)
 cb_data <- read.csv("Cooking_Books.csv")
 checkout_years_BOOK <- cb_data %>% 
   group_by(CheckoutYear) %>% 
@@ -20,5 +21,5 @@ df <- checkout_years %>%
 # Visualization
 ggplot(df, aes(x = CheckoutYear, y = Number_of_checkouts)) + 
   geom_line(aes(color = Type_of_book, linetype = Type_of_book)) + 
-  scale_color_manual(values = c("darkred", "darkgreen")) +
+  scale_color_manual(values = c("darkred", "steelblue")) +
   ggtitle("Ebooks VS books checked out from 2005 to 2023")
