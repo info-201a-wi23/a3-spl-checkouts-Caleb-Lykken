@@ -5,82 +5,38 @@ output: html_document
 
 ### Introduction
 
-An introduction of the data and a description of the trends/books/items you are choosing to analyze (and why!)
+I have chosen to analyze the trends in the checkout patterns of cooking books over time. I selected this topic because borrowing cookbooks is a different experience than borrowing books for leisurely reading. People often borrow cooking books to learn new recipes and techniques, and I am interested in exploring this trend, especially in light of the fact that recipes are now readily available online
 
 ### Summary Information
 
-Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
-
-These will likely be calculated using your DPLYR skills, answering questions such as:
-
-- What is the average number of checkouts for each item?
-- What is the month or year with the most/least checkouts for a book that you're interested in?
-- What is the month or year with the most/least checkouts for ebooks?
-- How has the number of print book checkouts changed over time?
-
-Feel free to calculate and report values that you find relevant.
+The year with the least amount of checked-out cooking books was 2020, likely due to the pandemic, while the year with the highest number of checkouts was 2013. In 2020, there was a significant decrease in physical book checkouts, but a peak in the checkout of cooking ebooks. On average, a physical cooking book was checked out approximately 2.99 times, while a cooking ebook was checked out about 2.64 times. Over the period from 2005 to 2022, a total of 1,149,889 cooking books were checked out.
 
 ### The Dataset
 
-- Who collected/published the data?  
-- What are the parameters of the data (dates, number of checkouts, kinds of books, etc.)?
-- How was the data collected or generated?  
-- Why was the data collected?  
-- What, if any, ethical questions do you need to consider when working with this data?  
-- What are possible limitations or problems with this data?   (at least 200 words)
+The Seattle Public Library was responsible for collecting and publishing the data, which includes information on the number of physical and electronic book checkouts from 2005 to the present day. The data is broken down by year and month and includes specific titles and authors. The library's system recorded checkouts and returns of library materials, while electronic book checkouts were tracked through the library's digital lending platform.
+
+The data was primarily collected for internal library use to inform collection development decisions and to evaluate the popularity of particular subject areas. Additionally, it was made available to data scientists and other interested parties. When working with library data, it is essential to consider ethical considerations, such as protecting patron privacy and ensuring that personally identifiable information is not shared or made public.
+
+However, one limitation of the data is that it only represents checkouts from the Seattle Public Library and may not reflect checkouts from other libraries or bookstores in the region. Furthermore, the data does not provide insights into why people checked out certain books, which may limit the analysis. Finally, changes in library policies, such as borrowing limits or the availability of certain titles, could affect checkout trends over time, influencing the accuracy of the data.
+
+Overall, the data offers valuable insights into the popularity of specific books and subject areas over time, but it is necessary to consider the limitations and potential biases in the data when drawing conclusions.
 
 
-### First Trends Over Time Chart
+### Number of Ebooks checked out vs the number of physical cooking books checked out
 
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
-
-The first chart that you will create and include will show the trend over time of your variable/topic/interest. Think carefully about what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
-
-- Show more than one, but fewer than ~10 trends
-  - For example, two books, or 5 different mediums
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- You need a legend for your different line colors and a clear - legend title
-In your .Rmd file, make sure to describe why you included the chart, and what patterns emerged
-
-When we say "clear" or "human readable" titles and labels, that means that you should not just display the variable name.
-
-Here's an example of how to run an R script inside an RMarkdown file:
 
 ```{r, echo = FALSE, warning = FALSE, code = readLines("Chart_1.R")}
+
 ```
-
-### Second Trends Over Time Chart
-
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
-
-The second chart that you will create and include will show another trend over time of your variable/topic/interest. Think carefully about what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
-
-- Show more than one, but fewer than ~10 trends
-  - For example, two books, or 5 different mediums
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- You need a legend for your different line colors and a clear - legend title
-In your .Rmd file, make sure to describe why you included the chart, and what patterns emerged
-
-When we say "clear" or "human readable" titles and labels, that means that you should not just display the variable name.
-
-Here's an example of how to run an R script inside an RMarkdown file:
+This chart illustrates the relationship between the total number of checked-out cooking books and the year of checkout. Additionally, it compares the number of checked-out cooking ebooks and physical books. It appears that cooking ebooks were not as popular in 2005, but their popularity surged in 2020 during the COVID-19 pandemic. On the other hand, the number of physical cooking books checked out had a steady increase until 2020 when it declined.
+### Percentage of cooking books checked out over time
 
 ```{r, echo = FALSE, code = readLines("Chart2.R")}
 ```
-
-### Your Choice
-
-The last chart is up to you. It could be a line plot, scatter plot, histogram, bar plot, stacked bar plot, and more. Here are some requirements to help guide your design:
-
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- You need a legend for your different line colors and a clear legend title
-
-Here's an example of how to run an R script inside an RMarkdown file:
+This graph displays the percentage of cooking books checked out each year, from 2013 to 2022. It is apparent that, in general, a higher percentage of books checked out in a given year were cooking books. For instance, in 2013, approximately 2.17% of all checked-out books were cooking books, while in 2022, this percentage increased to 3.68%. Note that 2023 is not included in this dataset due to a lack of complete data. 
+### Comparison of cooking books checked out each season
 
 ```{r, echo = FALSE, code = readLines("Chart_3.R")}
 ```
-
+This chart presents the seasonal trends of cooking book checkouts from 2005. Approximately 24% of cooking books were checked out during the spring and summer months, while 26% were checked out in the fall and 27% were checked out during winter. These findings align with expectations, as fall and winter seasons coincide with major holidays such as Thanksgiving and Christmas when people may be more interested in cooking and baking
 
